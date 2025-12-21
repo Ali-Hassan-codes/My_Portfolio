@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["MERN Stack Developer", "Flutter Developer", "Laravel Developer"];
+  const toRotate = ["MERN Stack Developer", "Flutter Developer", "Laravel Developer", "Golan Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -69,11 +69,11 @@ export const Banner = () => {
                     </span>
                   </h1>
                   <p>
-                    I am a Full Stack Developer with 6 months of hands-on experience.
+                    I am a Full Stack Developer with 2 years of hands-on experience.
                     I build user-friendly, responsive websites and mobile applications using 
                     HTML, CSS, and JavaScript — along with modern frameworks like React and Next.js. 
                     I also work with backend technologies such as Node.js, Express, MongoDB, Laravel, 
-                    and Go. I enjoy turning ideas into seamless, real-world applications while 
+                    and Golan. I enjoy turning ideas into seamless, real-world applications while 
                     keeping up with the latest development trends. Feel free to reach out — 
                     I’d love to connect!
                   </p>

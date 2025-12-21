@@ -3,32 +3,34 @@ import { ProjectCard } from "./ProjectCard";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
+// Images
+import orotrackerImg from "../assets/img/orotracker.png";
+import rmsImg from "../assets/img/rms.png";
+import purecarImg from "../assets/img/purecar.png";
+import news from "../assets/img/news.png";
+import logisticsImg from "../assets/img/logistics.png";
+
 export const Projects = () => {
   // ===== FRONTEND PROJECTS =====
   const projects1 = [
     {
-      title: "E-Portal (Flutter App)",
-      description: "Flutter + Laravel Integration",
+      title: "Car.Euro.UK",
+      description: "Project for buying and selling cars in the UK using Lravel and Bootstrap",
+      imgUrl: purecarImg,
     },
     {
-      title: "Job Portal",
-      description: "React + Laravel + MySQL",
-    },
-    {
-      title: "Personal Portfolio",
-      description: "React.js + EmailJS + Bootstrap",
-    },
+      title: "News App",
+      description: "A Website to get latest news using React.js + NewsAPI",
+      imgUrl: news,
+    },  
   ];
 
   // ===== BACKEND PROJECTS =====
   const projects2 = [
     {
-      title: "Laravel REST API",
-      description: "Authentication, Sanctum Tokens, CRUD Operations",
-    },
-    {
-      title: "GoLang API",
-      description: "Backend API using Go, Bufio, and net/http",
+      title: "Logistics Management",
+      description: "Logistics system backend project using Node.js + MongoDB",
+      imgUrl: logisticsImg,
     },
   ];
 
@@ -36,7 +38,13 @@ export const Projects = () => {
   const projects3 = [
     {
       title: "Oro Tracker",
-      description: "Next.js + Go + WebSocket (Live Gold/Silver Rates)",
+      description: "Next.js + Go + WebSocket: Live Gold & Silver prices",
+      imgUrl: orotrackerImg,
+    },
+    {
+      title: "RMS-MS",
+      description: "Laravel + MySQL + Next: Manage MS & PhD students’ FYPs with role-based dashboards",
+      imgUrl: rmsImg,
     },
   ];
 
@@ -47,11 +55,7 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>My Projects</h2>
                   <p>
                     I have built multiple applications using Flutter, Laravel,
@@ -75,13 +79,7 @@ export const Projects = () => {
                       </Nav.Item>
                     </Nav>
 
-                    <Tab.Content
-                      className={
-                        isVisible
-                          ? "animate__animated animate__slideInUp"
-                          : ""
-                      }
-                    >
+                    <Tab.Content className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects1.map((project, index) => (
