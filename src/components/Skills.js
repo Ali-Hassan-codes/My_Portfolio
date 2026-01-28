@@ -44,6 +44,22 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
+                  <img src={meter1} alt="WordPress" />
+                  <h5>Laravel</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="React Js" />
+                  <h5>React Js</h5>
+                </div>
+                   <div className="item">
+                  <img src={meter3} alt="Node.js" />
+                  <h5>Node.js</h5>
+                </div>
+                   <div className="item">
+                  <img src={meter3} alt="Node.js" />
+                  <h5>Golan</h5>
+                </div>
+                <div className="item">
                   <img src={meter1} alt="HTML/CSS" />
                   <h5>HTML/CSS</h5>
                 </div>
@@ -51,10 +67,7 @@ export const Skills = () => {
                   <img src={meter3} alt="JS/ES6" />
                   <h5>JS/ES6</h5>
                 </div>
-                <div className="item">
-                  <img src={meter1} alt="React-Bootstrap" />
-                  <h5>React-Bootstrap</h5>
-                </div>
+            
                 <div className="item">
                   <img src={meter1} alt="Tailwind CSS" />
                   <h5>Tailwind CSS</h5>
@@ -63,22 +76,12 @@ export const Skills = () => {
                   <img src={meter1} alt="Material UI" />
                   <h5>Material UI</h5>
                 </div>
-                <div className="item">
-                  <img src={meter2} alt="React Js" />
-                  <h5>React Js</h5>
-                </div>
+
                 <div className="item">
                   <img src={meter2} alt="Next Js" />
                   <h5>Next Js</h5>
                 </div>
-                <div className="item">
-                  <img src={meter1} alt="WordPress" />
-                  <h5>Laravel</h5>
-                </div>
-                <div className="item">
-                  <img src={meter3} alt="Node.js" />
-                  <h5>Node.js</h5>
-                </div>
+             
                 <div className="item">
                   <img src={meter3} alt="Express.js" />
                   <h5>Express.js</h5>

@@ -43,7 +43,7 @@ export const NavBar = () => {
         <Container>
           <Navbar.Brand href="/">
             <h1 style={{ color: "white", fontWeight: "bold" }}>
-              Suleman Shakeel
+              Ali Hassan
             </h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">

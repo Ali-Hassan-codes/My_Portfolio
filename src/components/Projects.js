@@ -1,46 +1,36 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import flutterApp from "../assets/img/flutter_app.jpg";
-import jobPortal from "../assets/img/job_portal.jpg";
-import ePortal from "../assets/img/e_portal.jpg";
-import laravelBackend from "../assets/img/laravel_backend.jpg";
-import goApi from "../assets/img/go_api.jpg";
-import fullStackTracker from "../assets/img/oro_tracker.jpg";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+
+// Images
+import orotrackerImg from "../assets/img/orotracker.png";
+import rmsImg from "../assets/img/rms.png";
+import purecarImg from "../assets/img/purecar.png";
+import news from "../assets/img/news.png";
+import logisticsImg from "../assets/img/logistics.png";
 
 export const Projects = () => {
   // ===== FRONTEND PROJECTS =====
   const projects1 = [
     {
-      title: "E-Portal (Flutter App)",
-      description: "Flutter + Laravel Integration",
-      imgUrl: ePortal,
+      title: "Car.Euro.UK",
+      description: "Project for buying and selling cars in the UK using Lravel and Bootstrap",
+      imgUrl: purecarImg,
     },
     {
-      title: "Job Portal",
-      description: "React + Laravel + MySQL",
-      imgUrl: jobPortal,
-    },
-    {
-      title: "Personal Portfolio",
-      description: "React.js + EmailJS + Bootstrap",
-      imgUrl: flutterApp,
-    },
+      title: "News App",
+      description: "A Website to get latest news using React.js + NewsAPI",
+      imgUrl: news,
+    },  
   ];
 
   // ===== BACKEND PROJECTS =====
   const projects2 = [
     {
-      title: "Laravel REST API",
-      description: "Authentication, Sanctum Tokens, CRUD Operations",
-      imgUrl: laravelBackend,
-    },
-    {
-      title: "GoLang API",
-      description: "Backend API using Go, Bufio, and net/http",
-      imgUrl: goApi,
+      title: "Logistics Management",
+      description: "Logistics system backend project using Node.js + MongoDB",
+      imgUrl: logisticsImg,
     },
   ];
 
@@ -48,8 +38,13 @@ export const Projects = () => {
   const projects3 = [
     {
       title: "Oro Tracker",
-      description: "Next.js + Go + WebSocket (Live Gold/Silver Rates)",
-      imgUrl: fullStackTracker,
+      description: "Next.js + Go + WebSocket: Live Gold & Silver prices",
+      imgUrl: orotrackerImg,
+    },
+    {
+      title: "RMS-MS",
+      description: "Laravel + MySQL + Next: Manage MS & PhD students’ FYPs with role-based dashboards",
+      imgUrl: rmsImg,
     },
   ];
 
@@ -60,71 +55,52 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
-                >
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>My Projects</h2>
                   <p>
-                    I have built multiple full-stack applications using Flutter, Laravel,
-                    React.js, and Go. My work focuses on real-world solutions — from APIs
-                    to responsive UIs and mobile apps. Below are some highlighted projects
-                    showcasing my versatility and modern development skills.
+                    I have built multiple applications using Flutter, Laravel,
+                    React.js, and Go, focusing on real-world solutions and clean
+                    architecture.
                   </p>
+
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
                       className="nav-pills mb-5 justify-content-center align-items-center"
-                      id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">
-                          <span className="d-none d-sm-inline">Frontend Development</span>
-                          <span className="d-inline d-sm-none">Frontend</span>
-                        </Nav.Link>
+                        <Nav.Link eventKey="first">Frontend</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">
-                          <span className="d-none d-sm-inline">Backend Development</span>
-                          <span className="d-inline d-sm-none">Backend</span>
-                        </Nav.Link>
+                        <Nav.Link eventKey="second">Backend</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">
-                          <span className="d-none d-sm-inline">FullStack Development</span>
-                          <span className="d-inline d-sm-none">FullStack</span>
-                        </Nav.Link>
+                        <Nav.Link eventKey="third">FullStack</Nav.Link>
                       </Nav.Item>
                     </Nav>
 
-                    <Tab.Content
-                      id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
-                    >
+                    <Tab.Content className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects1.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
+                          {projects1.map((project, index) => (
+                            <ProjectCard key={index} {...project} />
+                          ))}
                         </Row>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="second">
                         <Row>
-                          {projects2.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
+                          {projects2.map((project, index) => (
+                            <ProjectCard key={index} {...project} />
+                          ))}
                         </Row>
                       </Tab.Pane>
 
                       <Tab.Pane eventKey="third">
                         <Row>
-                          {projects3.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
+                          {projects3.map((project, index) => (
+                            <ProjectCard key={index} {...project} />
+                          ))}
                         </Row>
                       </Tab.Pane>
                     </Tab.Content>
@@ -135,7 +111,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="" />
     </section>
   );
 };
